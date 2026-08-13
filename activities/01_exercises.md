@@ -360,3 +360,383 @@ Answer the following 10 questions using Python and Pandas. Each answer must incl
 
 10. **Intermediate Pandas Analysis**  
    Use a DataFrame with at least three numeric columns and one categorical column. Write code to calculate summary statistics by group, detect possible outliers using a rule of your choice, and explain how those outliers could affect analysis.
+
+---
+
+## Answer Key
+
+This answer key provides objective answers and reference solutions. For coding and essay questions, equivalent solutions are acceptable if they are correct, readable, and well explained.
+
+### Part 1: Objective Questions
+
+| Question | Answer |
+|----------|--------|
+| 1 | B |
+| 2 | A |
+| 3 | A |
+| 4 | B |
+| 5 | A |
+| 6 | A |
+| 7 | C |
+| 8 | B |
+| 9 | A |
+| 10 | A |
+| 11 | D |
+| 12 | A |
+| 13 | A |
+| 14 | A |
+| 15 | A |
+| 16 | A |
+| 17 | A |
+| 18 | A |
+| 19 | A |
+| 20 | A |
+| 21 | A |
+| 22 | A |
+| 23 | A |
+| 24 | A |
+| 25 | A |
+| 26 | A |
+| 27 | A |
+| 28 | A |
+| 29 | A |
+| 30 | A |
+
+### Essay Questions: Reference Answers
+
+1. **Data Quality and Model Reliability**  
+   A strong answer should explain that data cleaning and exploratory data analysis are necessary because models learn from the data they receive. Missing values, duplicated records, incorrect types, inconsistent categories, outliers, and poorly understood variables can distort statistics, visualizations, and model behavior. Poor data quality can lead to misleading correlations, biased predictions, unreliable clusters, and wrong business decisions. Before modeling, analysts should inspect distributions, check assumptions, understand variable meaning, and document transformations.
+
+2. **Choosing the Right Analytical Approach**  
+   A strong answer should explain that descriptive statistics summarize data, visualizations reveal patterns and anomalies, supervised learning is appropriate when there is a target variable to predict, and unsupervised learning is appropriate when the goal is to discover structure without labels. CRISP-DM helps organize this decision by starting with business understanding, then data understanding, preparation, modeling, evaluation, and deployment. The chosen approach should match the problem goal, data availability, evaluation criteria, and practical constraints.
+
+### Basic Python Exercises: Reference Solutions
+
+1. **Variables and Arithmetic**
+
+```python
+product_1 = 25.00
+product_2 = 40.00
+product_3 = 15.00
+
+total = product_1 + product_2 + product_3
+discount_rate = 0.10 if total >= 70 else 0.0
+final_amount = total * (1 - discount_rate)
+
+print(f"Total: {total:.2f}")
+print(f"Final amount: {final_amount:.2f}")
+```
+
+2. **Conditional Statements**
+
+```python
+age = 21
+
+if age < 13:
+    category = "child"
+elif age < 18:
+    category = "teenager"
+elif age < 60:
+    category = "adult"
+else:
+    category = "senior"
+
+print(category)
+```
+
+3. **Loops with Lists**
+
+```python
+numbers = [3, 8, 11, 14, 19, 22, 27, 30, 35, 40]
+even_sum = 0
+odd_sum = 0
+
+for number in numbers:
+    if number % 2 == 0:
+        even_sum += number
+    else:
+        odd_sum += number
+
+print(even_sum)
+print(odd_sum)
+```
+
+4. **String Manipulation**
+
+```python
+sentence = "python is useful for problem solving"
+words = sentence.split()
+
+print(len(words))
+print(sentence.upper())
+print(sentence.lower())
+print(sentence.title())
+```
+
+5. **Functions**
+
+```python
+def calculate_area(shape, value1, value2=0):
+    shape = shape.lower()
+
+    if shape == "square":
+        return value1 ** 2
+    if shape == "rectangle":
+        return value1 * value2
+    if shape == "triangle":
+        return (value1 * value2) / 2
+
+    return None
+
+print(calculate_area("square", 4))
+print(calculate_area("rectangle", 4, 6))
+print(calculate_area("triangle", 4, 6))
+```
+
+6. **Dictionaries**
+
+```python
+book = {
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "year": 2008,
+    "pages": 464,
+}
+
+book["year"] = 2009
+book["genre"] = "Programming"
+book.pop("pages")
+
+print(book)
+```
+
+7. **Nested Data Structures**
+
+```python
+products = [
+    {"name": "Notebook", "price": 8.50, "quantity": 10},
+    {"name": "Pen", "price": 2.00, "quantity": 30},
+    {"name": "Backpack", "price": 120.00, "quantity": 4},
+    {"name": "Pencil", "price": 1.50, "quantity": 50},
+    {"name": "Eraser", "price": 3.00, "quantity": 20},
+]
+
+for product in products:
+    stock_value = product["price"] * product["quantity"]
+    print(product["name"], stock_value)
+```
+
+8. **Error Handling**
+
+```python
+try:
+    number_1 = float(input("First number: "))
+    number_2 = float(input("Second number: "))
+    result = number_1 / number_2
+    print(result)
+except ValueError:
+    print("Invalid numeric input.")
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+finally:
+    print("Execution finished.")
+```
+
+9. **List Comprehension**
+
+```python
+numbers = list(range(1, 51))
+divisible_by_3 = [number for number in numbers if number % 3 == 0]
+squares = [number ** 2 for number in numbers]
+
+print(divisible_by_3)
+print(squares)
+```
+
+10. **Basic Algorithmic Thinking**
+
+```python
+def longest_word(words):
+    longest = words[0]
+
+    for word in words[1:]:
+        if len(word) > len(longest):
+            longest = word
+
+    return longest
+
+print(longest_word(["data", "python", "visualization", "model"]))
+```
+
+### Python and Pandas Exercises: Reference Solutions
+
+1. **Basic Python Data Structures**
+
+```python
+students = [
+    {"name": "Ana", "age": 20, "course": "Data Science", "final_grade": 8.5},
+    {"name": "Bruno", "age": 22, "course": "Data Science", "final_grade": 6.8},
+    {"name": "Carla", "age": 21, "course": "AI", "final_grade": 9.2},
+    {"name": "Diego", "age": 23, "course": "AI", "final_grade": 7.4},
+    {"name": "Eva", "age": 20, "course": "Software", "final_grade": 5.9},
+    {"name": "Felipe", "age": 24, "course": "Software", "final_grade": 8.1},
+    {"name": "Giulia", "age": 19, "course": "Data Science", "final_grade": 7.0},
+    {"name": "Hugo", "age": 22, "course": "AI", "final_grade": 6.5},
+]
+
+average_grade = sum(student["final_grade"] for student in students) / len(students)
+best_student = max(students, key=lambda student: student["final_grade"])
+passed_students = [student for student in students if student["final_grade"] >= 7.0]
+
+print(average_grade)
+print(best_student)
+print(passed_students)
+```
+
+2. **Functions and Conditional Logic**
+
+```python
+def classify_grade(grade):
+    if grade >= 9:
+        return "Excellent"
+    if grade >= 7:
+        return "Good"
+    if grade >= 5:
+        return "Pass"
+    return "Fail"
+
+grades = [9.5, 8.0, 6.2, 4.8]
+labels = [classify_grade(grade) for grade in grades]
+print(labels)
+```
+
+3. **Creating a DataFrame**
+
+```python
+import pandas as pd
+
+sales = pd.DataFrame({
+    "product": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"],
+    "category": ["Tech", "Tech", "Food", "Food", "Home", "Home", "Tech", "Food", "Home", "Tech"],
+    "unit_price": [100, 150, 20, 15, 80, 60, 200, 25, 90, 120],
+    "quantity_sold": [3, 2, 10, 15, 4, 5, 1, 8, 3, 2],
+    "region": ["North", "South", "North", "East", "West", "South", "East", "West", "North", "South"],
+})
+
+sales["total_revenue"] = sales["unit_price"] * sales["quantity_sold"]
+print(sales)
+```
+
+4. **Filtering and Sorting Data**
+
+```python
+filtered = sales[(sales["category"] == "Tech") & (sales["total_revenue"] >= 240)]
+filtered = filtered.sort_values("total_revenue", ascending=False)
+print(filtered)
+```
+
+5. **Handling Missing Values**
+
+```python
+df = pd.DataFrame({
+    "name": ["A", "B", "C", "D"],
+    "age": [20, None, 22, 21],
+    "score": [8.5, 7.0, None, 9.0],
+})
+
+print(df.isna().sum())
+df["age"] = df["age"].fillna(df["age"].median())
+df["score"] = df["score"].fillna(df["score"].mean())
+print(df)
+```
+
+6. **Grouping and Aggregation**
+
+```python
+summary = sales.groupby("category").agg(
+    total_revenue=("total_revenue", "sum"),
+    average_unit_price=("unit_price", "mean"),
+    total_quantity_sold=("quantity_sold", "sum"),
+)
+
+print(summary)
+```
+
+7. **Working with Dates**
+
+```python
+transactions = pd.DataFrame({
+    "date": ["2026-01-05", "2026-01-20", "2026-02-10", "2026-02-18", "2026-03-03"],
+    "revenue": [200, 150, 300, 250, 400],
+})
+
+transactions["date"] = pd.to_datetime(transactions["date"])
+transactions["month"] = transactions["date"].dt.month
+transactions["weekday"] = transactions["date"].dt.day_name()
+monthly_revenue = transactions.groupby("month")["revenue"].sum()
+
+print(transactions)
+print(monthly_revenue)
+```
+
+8. **Merging DataFrames**
+
+```python
+customers = pd.DataFrame({
+    "customer_id": [1, 2, 3],
+    "name": ["Ana", "Bruno", "Carla"],
+})
+
+purchases = pd.DataFrame({
+    "customer_id": [1, 1, 2, 4],
+    "purchase_value": [100, 50, 80, 120],
+})
+
+inner_result = customers.merge(purchases, on="customer_id", how="inner")
+left_result = customers.merge(purchases, on="customer_id", how="left")
+
+print(inner_result)
+print(left_result)
+```
+
+9. **Data Cleaning Pipeline**
+
+```python
+messy = pd.DataFrame({
+    "Customer Name ": ["Ana", "Ana", "Bruno", None],
+    "Age": ["20", "20", "22", "21"],
+    "Purchase": [100, 100, None, 80],
+})
+
+clean = messy.rename(columns=lambda column: column.strip().lower().replace(" ", "_"))
+clean = clean.drop_duplicates()
+clean["customer_name"] = clean["customer_name"].fillna("Unknown")
+clean["age"] = clean["age"].astype(int)
+clean["purchase"] = clean["purchase"].fillna(clean["purchase"].median())
+clean["is_adult"] = clean["age"] >= 18
+
+print(clean)
+```
+
+10. **Intermediate Pandas Analysis**
+
+```python
+df = pd.DataFrame({
+    "group": ["A", "A", "A", "B", "B", "B"],
+    "score": [70, 75, 300, 80, 85, 90],
+    "hours": [5, 6, 7, 4, 5, 6],
+    "attempts": [1, 2, 1, 2, 2, 3],
+})
+
+summary = df.groupby("group")[["score", "hours", "attempts"]].describe()
+
+q1 = df["score"].quantile(0.25)
+q3 = df["score"].quantile(0.75)
+iqr = q3 - q1
+lower_bound = q1 - 1.5 * iqr
+upper_bound = q3 + 1.5 * iqr
+outliers = df[(df["score"] < lower_bound) | (df["score"] > upper_bound)]
+
+print(summary)
+print(outliers)
+```
