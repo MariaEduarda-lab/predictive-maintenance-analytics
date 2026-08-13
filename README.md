@@ -2,6 +2,14 @@
 
 Welcome to the Predictive Models study repository! This comprehensive guide is designed to help you understand machine learning fundamentals, from basic data manipulation to advanced predictive modeling techniques.
 
+## ⚠️ Important Notice
+
+This repository is **only a supplementary study aid**.
+
+It **does not replace classes, lectures, official course materials, assignments, rubrics, deadlines, or any decision made by the professor**. If anything in this repository differs from what the professor says, explains, requests, or evaluates, **the professor's guidance always takes priority**.
+
+Use this material to review concepts, practice examples, and support your learning outside class.
+
 ## 📚 Repository Structure
 
 This repository is organized into four main learning modules:
@@ -24,6 +32,7 @@ This repository is organized into four main learning modules:
    - Elbow Method for cluster selection
    - Silhouette Analysis
    - Distance metrics and similarity
+   - Visual diagrams for clustering workflows and evaluation methods
 
 4. **[Additional Resources](./04_resources.md)**
    - Video tutorials and references
@@ -63,10 +72,15 @@ Each module contains:
 - **Conceptual explanations** of key ideas
 - **Practical examples** you can follow along with
 - **Code snippets** for implementation
+- **Generated visual diagrams** to make abstract concepts easier to inspect
 - **Video tutorials** for visual learning
 - **Recommended resources** for deeper understanding
 
 Start with a topic that interests you, or follow the recommended learning path for a comprehensive education in predictive modeling.
+
+## 🖼️ Visual Assets
+
+Some concepts are supported by SVG figures stored in [`assets/`](./assets).
 
 ---
 
