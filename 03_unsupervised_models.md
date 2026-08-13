@@ -72,29 +72,11 @@ Finding relationships between variables.
 
 ### Unsupervised Learning Workflow
 
-```
-1. Prepare Data
-   ├─ Collect data
-   ├─ Handle missing values
-   └─ Scale/normalize
-        ↓
-2. Choose Algorithm
-   └─ Clustering, dimensionality reduction, etc.
-        ↓
-3. Apply Algorithm
-   └─ Fit model on data
-        ↓
-4. Evaluate & Interpret
-   ├─ Visualize results
-   ├─ Measure cluster quality
-   └─ Make sense of patterns
-        ↓
-5. Use Results
-   ├─ Segment customers
-   ├─ Reduce features
-   ├─ Detect anomalies
-   └─ Generate insights
-```
+<div align="center">
+  <small><strong style="font-size: 12px;">Figura 1: Unsupervised Learning Workflow</strong></small><br>
+   <img src="../assets/unsupervised_workflow.svg"/><br>
+  <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2026).</small><br>
+</div>
 
 ---
 
@@ -108,27 +90,11 @@ Clustering is the process of grouping data points into clusters (groups) where:
 
 ### Visual Example
 
-**Before Clustering:**
-```
-Points scattered randomly:
-
-  * * * *
- *   *   *
-* * * * * *
- *   *   *
-  * * * *
-```
-
-**After Clustering:**
-```
-Points grouped into clusters:
-
-  A A A A
- A   B   B
-B B B C C C
- C   C   B
-  C C B A
-```
+<div align="center">
+  <small><strong style="font-size: 12px;">Figura 2: Before and After Clustering</strong></small><br>
+   <img src="../assets/clustering_before_after.svg"/><br>
+  <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2026).</small><br>
+</div>
 
 ### How Does the Computer "Know" Similarity?
 
@@ -182,25 +148,11 @@ Imagine you want to place K warehouses to serve customers. You want to minimize 
 
 **Algorithm Steps:**
 
-```
-1. Initialize K centers randomly
-   C₁ *
-   C₂        *
-   C₃           *
-
-2. Assign each point to nearest center
-   A A A
-     A A
-   B B        C C
-   B   B         C
-
-3. Move each center to mean position of assigned points
-   C₁*  (moved)
-   C₂       *
-   C₃          *  (moved)
-
-4. Repeat steps 2-3 until centers don't move
-```
+<div align="center">
+  <small><strong style="font-size: 12px;">Figura 3: K-Means Algorithm Steps</strong></small><br>
+   <img src="../assets/kmeans_algorithm_steps.svg"/><br>
+  <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2026).</small><br>
+</div>
 
 ### Mathematical Definition
 
@@ -325,20 +277,11 @@ As we increase K:
 - Inertia always decreases (adding more clusters fits tighter)
 - But the improvement diminishes
 
-```
-Inertia
-    ▲
-    │
-  1 │╲
-    │ ╲
-    │  ╲ ← Steep decrease (useful)
-    │   ╲
-  0 │    ╲────── ← Flat (not useful)
-    │         ╲
-    └─────────────→ K (number of clusters)
-    
-    The "elbow" is where curve changes slope
-```
+<div align="center">
+  <small><strong style="font-size: 12px;">Figura 4: Elbow Method</strong></small><br>
+   <img src="../assets/elbow_method.svg"/><br>
+  <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2026).</small><br>
+</div>
 
 ### Finding the Elbow
 
@@ -368,32 +311,11 @@ plt.show()
 
 ### Interpreting the Elbow Plot
 
-```
-Scenario 1 - Clear Elbow:
-Inertia
-    ▲
-    │╲
-    │ ╲ ← Steep
-    │  ╲
-    │   ╲
-    │    ║ ← Elbow at K=3
-    │    ╲────
-    └─────────→ K
-    
-Result: K=3 is optimal
-
-Scenario 2 - No Clear Elbow:
-Inertia
-    ▲
-    │ ╲
-    │  ╲
-    │   ╲
-    │    ╲
-    │     ╲──── ← Gradual (no clear elbow)
-    └─────────→ K
-    
-Result: Use domain knowledge or other methods
-```
+<div align="center">
+  <small><strong style="font-size: 12px;">Figura 5: Interpreting Elbow Plots</strong></small><br>
+   <img src="../assets/elbow_scenarios.svg"/><br>
+  <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2026).</small><br>
+</div>
 
 ### Elbow Method Limitations
 
@@ -432,17 +354,11 @@ Silhouette Score = (b - a) / max(a, b)
 
 ### Visual Example
 
-```
-Good Silhouette (point is far from other clusters):
-     Cluster B
-        * (high silhouette)
-     ▲  |
-     │  |
-     └──┼────────────────→
-        │      Cluster A
-        │      * *  (moderate silhouette)
-        └──────────* (low silhouette, near boundary)
-```
+<div align="center">
+  <small><strong style="font-size: 12px;">Figura 6: Silhouette Score Intuition</strong></small><br>
+   <img src="../assets/silhouette_concept.svg"/><br>
+  <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2026).</small><br>
+</div>
 
 ### Computing Silhouette Score
 
@@ -479,30 +395,11 @@ plt.show()
 
 ### Interpreting Silhouette Plots
 
-**Good Clustering:**
-```
-Cluster 0:   ───────────────
-             (all values > 0, thick)
-
-Cluster 1:   ───────────────
-             (all values > 0, thick)
-
-Cluster 2:   ───────────────
-             (all values > 0, thick)
-
-Average:   ────────────────
-           (high positive value)
-```
-
-**Poor Clustering:**
-```
-Cluster 0:   ←───→         ← Many negative values
-             Cluster 1: ──→ ← Some negative
-             
-
-Average:   ←──────→        ← Low/negative average
-           (bad clustering)
-```
+<div align="center">
+  <small><strong style="font-size: 12px;">Figura 7: Silhouette Plot Examples</strong></small><br>
+   <img src="../assets/silhouette_plots.svg"/><br>
+  <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2026).</small><br>
+</div>
 
 ### Silhouette Score Ranges
 
@@ -559,21 +456,14 @@ print(f"Best K: {best_k}")
 **Two Approaches:**
 
 **Agglomerative (Bottom-Up):**
-```
-5 points → Merge nearest two
-4 clusters → Merge nearest two
-3 clusters → Merge nearest two
-2 clusters → Merge
-1 cluster
-```
 
 **Divisive (Top-Down):**
-```
-1 cluster → Split
-2 clusters → Split
-3 clusters → Split
-... → Continue
-```
+
+<div align="center">
+  <small><strong style="font-size: 12px;">Figura 8: Hierarchical Clustering Approaches</strong></small><br>
+   <img src="../assets/hierarchical_clustering.svg"/><br>
+  <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2026).</small><br>
+</div>
 
 **Implementation:**
 ```python
@@ -609,23 +499,15 @@ clusters = fcluster(Z, t=2, criterion='maxclust')  # t=2 means 2 clusters
 
 **Idea:** Clusters are dense regions separated by sparse regions.
 
-```
-Dense region = Cluster
-Sparse points = Noise/Outliers
-```
+<div align="center">
+  <small><strong style="font-size: 12px;">Figura 9: DBSCAN Density and Noise</strong></small><br>
+   <img src="../assets/dbscan_density.svg"/><br>
+  <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2026).</small><br>
+</div>
 
 **Key Concepts:**
 - **ε (eps)**: Maximum distance between points
 - **minPts**: Minimum points in neighborhood
-
-**Example:**
-```
-* * *
-* O *  ← Point O has 8 neighbors within ε
-* * *  (if minPts ≤ 8, O is core point → part of cluster)
-
-      *  ← This point is isolated (noise)
-```
 
 **Implementation:**
 ```python
@@ -703,20 +585,11 @@ bic_scores = [GaussianMixture(n).fit(data).bic(data) for n in range(1, 10)]
 
 Different distance metrics can give different clustering results!
 
-```
-Cluster with Euclidean distance might differ from
-Cluster with Manhattan distance:
-
-     B
-    /|
-   / | 5
-  /  |
- A───C
-    3
-
-Euclidean (straight line):  √(3² + 4²) = 5
-Manhattan (grid path):      3 + 4 = 7
-```
+<div align="center">
+  <small><strong style="font-size: 12px;">Figura 10: Euclidean vs Manhattan Distance</strong></small><br>
+   <img src="../assets/distance_metrics.svg"/><br>
+  <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2026).</small><br>
+</div>
 
 ### Common Distance Metrics
 
@@ -955,24 +828,11 @@ plt.show()
 
 ### Choosing Algorithm Flowchart
 
-```
-Do you know number of clusters?
-├─ YES → K-Means (simple, fast)
-└─ NO → Try Elbow method + Silhouette
-        or use Hierarchical/DBSCAN
-
-Do you want to find outliers?
-├─ YES → DBSCAN
-└─ NO → K-Means or others
-
-Do you need probabilistic output?
-├─ YES → Gaussian Mixture Models
-└─ NO → K-Means, DBSCAN, Hierarchical
-
-Is your data high-dimensional (100+ features)?
-├─ YES → Consider dimensionality reduction first
-└─ NO → Use clustering directly
-```
+<div align="center">
+  <small><strong style="font-size: 12px;">Figura 11: Choosing a Clustering Algorithm</strong></small><br>
+   <img src="../assets/clustering_algorithm_flowchart.svg"/><br>
+  <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2026).</small><br>
+</div>
 
 ### Key Takeaways
 

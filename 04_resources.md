@@ -107,6 +107,8 @@ tion
   - Hands-on notebooks
   - Covers Python, ML, data analysis
 
+* Bonus: https://www.youtube.com/watch?v=BV03sQ0srcU (secret!!)
+
 ### Advanced Courses
 
 **Stanford**

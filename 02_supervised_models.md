@@ -177,20 +177,11 @@ Despite its name, logistic regression is a **classification** algorithm, not a r
 
 Logistic regression uses the **logistic function** (sigmoid function) to convert linear relationships into probabilities:
 
-```
-Probability Output
-    1.0 │         ╱╱╱╱╱
-        │        ╱╱╱╱
-    0.8 │       ╱╱╱╱
-        │      ╱╱╱╱
-    0.6 │     ╱╱╱╱
-        │    ╱╱╱╱
-    0.4 │   ╱╱╱╱
-        │  ╱╱╱╱
-    0.2 │ ╱╱╱╱
-        │╱╱╱╱
-    0.0 └─────────────────→ Input
-```
+<div align="center">
+  <small><strong style="font-size: 12px;">Figure 1: Logistic Sigmoid Function</strong></small><br>
+   <img src="../assets/logistic_sigmoid.svg"/><br>
+  <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2026).</small><br>
+</div>
 
 The curve shows how the model's confidence grows smoothly from 0 to 1.
 

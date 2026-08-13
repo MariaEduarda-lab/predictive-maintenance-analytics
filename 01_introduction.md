@@ -333,18 +333,11 @@ Imagine you're preparing for an exam by memorizing practice questions word-for-w
 
 ### Visualizing Overfitting
 
-```
-Performance
-    ▲
-    │     Underfitting    Optimal    Overfitting
-    │         /            /\            \
-    │        /            /  \            \
-    │                    /    \            \
-    ├─────────────────────────────────────────→ Model Complexity
-    │
-    │  (Too simple)    (Good fit)  (Too complex)
-    │
-```
+<div align="center">
+  <small><strong style="font-size: 12px;">Figure 1: Model Complexity and Performance</strong></small><br>
+   <img src="../assets/model_complexity_performance.svg"/><br>
+  <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2026).</small><br>
+</div>
 
 ### Visual Example
 
@@ -482,19 +475,13 @@ Overfitting is related to the **bias-variance tradeoff**:
   - Poor generalization
 
 **Goal**: Find the sweet spot between bias and variance
+Erro total = bias² + variance + irreducible error
 
-```
-Error
-  ▲
-  │         Total Error
-  │            /\
-  │    Bias   /  \   Variance
-  │         /      \
-  ├────────────────────────────→ Model Complexity
-  │
-  │ Simple          Complex
-  │ Underfitting    Overfitting
-```
+<div align="center">
+  <small><strong style="font-size: 12px;">Figure 2: Bias-Variance Tradeoff</strong></small><br>
+   <img src="../assets/bias_variance_tradeoff.svg"/><br>
+  <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2026).</small><br>
+</div>
 
 ### Monitoring for Overfitting
 
@@ -613,8 +600,10 @@ print(f"Accuracy: {score}")
 ## Recommended Resources
 
 - **Video Tutorials**: 
-  - Jupyter Notebook Intro: https://www.youtube.com/watch?v=W01tIRP_Rqs
-  - Pandas Basics: https://www.youtube.com/watch?v=7TqhmX92P6U
+  - Jupyter Notebook Intro: https://www.youtube.com/watch?v=5pf0_bpNbkw
+  - Pandas vs Numpy: https://www.youtube.com/watch?v=KHoEbRH46Zk
+  - Overfitting Explained: https://www.youtube.com/watch?v=0RT2Q0qwXSA
+  - Underfitting  Explained: https://www.youtube.com/watch?v=pptU3bpJojo
   
 - **Documentation**:
   - [Pandas Official Documentation](https://pandas.pydata.org/docs/)

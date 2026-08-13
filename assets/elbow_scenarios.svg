@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560" role="img">
+  <style>
+    text { font-family: Inter, Arial, sans-serif; fill: #24292f; }
+    .title { font-size: 30px; font-weight: 700; }
+    .label { font-size: 18px; font-weight: 700; }
+    .small { font-size: 15px; fill: #57606a; }
+    .axis { stroke: #8c959f; stroke-width: 2; }
+    .grid { stroke: #eaeef2; stroke-width: 1; }
+    .line { fill: none; stroke: #2f80ed; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    .dash { stroke: #27ae60; stroke-width: 3; stroke-dasharray: 9 9; }
+    .box { fill: #ffffff; stroke: #d0d7de; stroke-width: 2; rx: 8; }
+    .blue { fill: #2f80ed; }
+    .orange { fill: #f2994a; }
+    .green { fill: #27ae60; }
+    .red { fill: #eb5757; }
+    .muted { fill: #8c959f; }
+  </style>
+  <rect width="100%" height="100%" fill="#ffffff" />
+  
+  <text x="490" y="48" text-anchor="middle" class="title">Interpreting Elbow Plots</text>
+  <text x="265" y="98" text-anchor="middle" class="label">Clear Elbow</text><text x="715" y="98" text-anchor="middle" class="label">No Clear Elbow</text>
+  <line x1="100" y1="360" x2="430" y2="360" class="axis" /><line x1="100" y1="135" x2="100" y2="360" class="axis" />
+  <path d="M105 145 C160 205, 210 275, 265 315 C315 342, 365 350, 425 354" class="line" />
+  <circle cx="265" cy="315" r="8" class="green" /><text x="285" y="302" class="small">K=3</text>
+  <line x1="550" y1="360" x2="880" y2="360" class="axis" /><line x1="550" y1="135" x2="550" y2="360" class="axis" />
+  <path d="M555 150 C625 215, 685 270, 750 314 C790 338, 830 350, 875 355" class="line" />
+  <text x="265" y="420" text-anchor="middle" class="small">Use the visible bend as a candidate K.</text>
+  <text x="715" y="420" text-anchor="middle" class="small">Use silhouette scores or domain knowledge.</text>
+  
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560" role="img">
+  <style>
+    text { font-family: Inter, Arial, sans-serif; fill: #24292f; }
+    .title { font-size: 30px; font-weight: 700; }
+    .label { font-size: 18px; font-weight: 700; }
+    .small { font-size: 15px; fill: #57606a; }
+    .axis { stroke: #8c959f; stroke-width: 2; }
+    .grid { stroke: #eaeef2; stroke-width: 1; }
+    .line { fill: none; stroke: #2f80ed; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    .dash { stroke: #27ae60; stroke-width: 3; stroke-dasharray: 9 9; }
+    .box { fill: #ffffff; stroke: #d0d7de; stroke-width: 2; rx: 8; }
+    .blue { fill: #2f80ed; }
+    .orange { fill: #f2994a; }
+    .green { fill: #27ae60; }
+    .red { fill: #eb5757; }
+    .muted { fill: #8c959f; }
+  </style>
+  <rect width="100%" height="100%" fill="#ffffff" />
+  
+  <text x="490" y="48" text-anchor="middle" class="title">Before and After Clustering</text>
+  <text x="260" y="96" text-anchor="middle" class="label">Before</text>
+  <text x="720" y="96" text-anchor="middle" class="label">After</text>
+  <rect x="80" y="115" width="360" height="300" fill="#f6f8fa" stroke="#d0d7de" rx="8" />
+  <rect x="540" y="115" width="360" height="300" fill="#f6f8fa" stroke="#d0d7de" rx="8" />
+  <circle cx="170" cy="160" r="8" class="muted" /><circle cx="220" cy="130" r="8" class="muted" /><circle cx="265" cy="180" r="8" class="muted" /><circle cx="200" cy="225" r="8" class="muted" /><circle cx="300" cy="235" r="8" class="muted" /><circle cx="410" cy="165" r="8" class="muted" /><circle cx="455" cy="125" r="8" class="muted" /><circle cx="510" cy="190" r="8" class="muted" /><circle cx="470" cy="250" r="8" class="muted" /><circle cx="610" cy="155" r="8" class="muted" /><circle cx="680" cy="145" r="8" class="muted" /><circle cx="720" cy="220" r="8" class="muted" /><circle cx="650" cy="265" r="8" class="muted" /><circle cx="755" cy="260" r="8" class="muted" /><circle cx="630" cy="160" r="8" class="blue" /><circle cx="680" cy="130" r="8" class="blue" /><circle cx="725" cy="180" r="8" class="blue" /><circle cx="660" cy="225" r="8" class="blue" /><circle cx="760" cy="235" r="8" class="blue" /><circle cx="870" cy="165" r="8" class="orange" /><circle cx="915" cy="125" r="8" class="orange" /><circle cx="970" cy="190" r="8" class="orange" /><circle cx="930" cy="250" r="8" class="orange" /><circle cx="1070" cy="155" r="8" class="green" /><circle cx="1140" cy="145" r="8" class="green" /><circle cx="1180" cy="220" r="8" class="green" /><circle cx="1110" cy="265" r="8" class="green" /><circle cx="1215" cy="260" r="8" class="green" /><text x="260" y="455" text-anchor="middle" class="small">Unlabeled points</text><text x="720" y="455" text-anchor="middle" class="small">Similar points grouped together</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560" role="img">
+  <style>
+    text { font-family: Inter, Arial, sans-serif; fill: #24292f; }
+    .title { font-size: 30px; font-weight: 700; }
+    .label { font-size: 18px; font-weight: 700; }
+    .small { font-size: 15px; fill: #57606a; }
+    .axis { stroke: #8c959f; stroke-width: 2; }
+    .grid { stroke: #eaeef2; stroke-width: 1; }
+    .line { fill: none; stroke: #2f80ed; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    .dash { stroke: #27ae60; stroke-width: 3; stroke-dasharray: 9 9; }
+    .box { fill: #ffffff; stroke: #d0d7de; stroke-width: 2; rx: 8; }
+    .blue { fill: #2f80ed; }
+    .orange { fill: #f2994a; }
+    .green { fill: #27ae60; }
+    .red { fill: #eb5757; }
+    .muted { fill: #8c959f; }
+  </style>
+  <rect width="100%" height="100%" fill="#ffffff" />
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#8c959f" />
+    </marker>
+  </defs>
+  <text x="490" y="48" text-anchor="middle" class="title">Unsupervised Learning Workflow</text>
+  <rect x="75" y="118" width="150" height="86" class="box" /><text x="150" y="151" text-anchor="middle" class="label">Prepare Data</text><text x="150" y="178" text-anchor="middle" class="small">clean and scale</text>
+  <rect x="285" y="118" width="150" height="86" class="box" /><text x="360" y="151" text-anchor="middle" class="label">Choose Model</text><text x="360" y="178" text-anchor="middle" class="small">clustering, PCA</text>
+  <rect x="495" y="118" width="150" height="86" class="box" /><text x="570" y="151" text-anchor="middle" class="label">Fit Model</text><text x="570" y="178" text-anchor="middle" class="small">learn patterns</text>
+  <rect x="705" y="118" width="150" height="86" class="box" /><text x="780" y="151" text-anchor="middle" class="label">Interpret</text><text x="780" y="178" text-anchor="middle" class="small">visualize quality</text>
+  <line x1="225" y1="161" x2="285" y2="161" stroke="#8c959f" stroke-width="3" marker-end="url(#arrow)" /><line x1="435" y1="161" x2="495" y2="161" stroke="#8c959f" stroke-width="3" marker-end="url(#arrow)" /><line x1="645" y1="161" x2="705" y2="161" stroke="#8c959f" stroke-width="3" marker-end="url(#arrow)" />
+  <rect x="335" y="310" width="310" height="96" class="box" /><text x="490" y="346" text-anchor="middle" class="label">Use Results</text><text x="490" y="374" text-anchor="middle" class="small">segment, reduce features, detect anomalies</text>
+  <line x1="780" y1="204" x2="575" y2="310" stroke="#8c959f" stroke-width="3" marker-end="url(#arrow)" />
+</svg>

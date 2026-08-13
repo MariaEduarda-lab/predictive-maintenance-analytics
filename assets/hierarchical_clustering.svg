@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560" role="img">
+  <style>
+    text { font-family: Inter, Arial, sans-serif; fill: #24292f; }
+    .title { font-size: 30px; font-weight: 700; }
+    .label { font-size: 18px; font-weight: 700; }
+    .small { font-size: 15px; fill: #57606a; }
+    .axis { stroke: #8c959f; stroke-width: 2; }
+    .grid { stroke: #eaeef2; stroke-width: 1; }
+    .line { fill: none; stroke: #2f80ed; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    .dash { stroke: #27ae60; stroke-width: 3; stroke-dasharray: 9 9; }
+    .box { fill: #ffffff; stroke: #d0d7de; stroke-width: 2; rx: 8; }
+    .blue { fill: #2f80ed; }
+    .orange { fill: #f2994a; }
+    .green { fill: #27ae60; }
+    .red { fill: #eb5757; }
+    .muted { fill: #8c959f; }
+  </style>
+  <rect width="100%" height="100%" fill="#ffffff" />
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#8c959f" />
+    </marker>
+  </defs>
+  <text x="490" y="48" text-anchor="middle" class="title">Hierarchical Clustering</text>
+  <text x="265" y="100" text-anchor="middle" class="label">Agglomerative</text><text x="715" y="100" text-anchor="middle" class="label">Divisive</text>
+  <rect x="140" y="140" width="250" height="55" class="box" /><text x="265" y="174" text-anchor="middle" class="small">5 points</text>
+  <rect x="140" y="230" width="250" height="55" class="box" /><text x="265" y="264" text-anchor="middle" class="small">merge nearest clusters</text>
+  <rect x="140" y="320" width="250" height="55" class="box" /><text x="265" y="354" text-anchor="middle" class="small">1 final hierarchy</text>
+  <line x1="265" y1="195" x2="265" y2="230" stroke="#8c959f" stroke-width="3" marker-end="url(#arrow)" /><line x1="265" y1="285" x2="265" y2="320" stroke="#8c959f" stroke-width="3" marker-end="url(#arrow)" />
+  <rect x="590" y="140" width="250" height="55" class="box" /><text x="715" y="174" text-anchor="middle" class="small">1 large cluster</text>
+  <rect x="590" y="230" width="250" height="55" class="box" /><text x="715" y="264" text-anchor="middle" class="small">split recursively</text>
+  <rect x="590" y="320" width="250" height="55" class="box" /><text x="715" y="354" text-anchor="middle" class="small">many smaller clusters</text>
+  <line x1="715" y1="195" x2="715" y2="230" stroke="#8c959f" stroke-width="3" marker-end="url(#arrow)" /><line x1="715" y1="285" x2="715" y2="320" stroke="#8c959f" stroke-width="3" marker-end="url(#arrow)" />
+</svg>
