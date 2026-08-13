@@ -360,34 +360,6 @@ pip install -r requirements.txt
 
 ## Study Tips
 
-### Recommended Learning Path
-
-1. **Week 1-2: Foundations**
-   - Jupyter Notebook basics
-   - Pandas fundamentals
-   - NumPy operations
-   - Read: 01_introduction.md
-
-2. **Week 3-4: Supervised Learning**
-   - Logistic Regression
-   - Random Forest
-   - Model evaluation metrics
-   - Read: 02_supervised_models.md
-   - **Do:** Kaggle Titanic competition
-
-3. **Week 5-6: Unsupervised Learning**
-   - K-Means clustering
-   - Elbow method & Silhouette
-   - DBSCAN, Hierarchical
-   - Read: 03_unsupervised_models.md
-   - **Do:** Customer segmentation project
-
-4. **Week 7-8: Advanced Topics**
-   - Recommendation systems
-   - Ensemble methods
-   - Feature engineering
-   - Project combining supervised + unsupervised
-
 ### Best Practices for Learning
 
 ✓ **Hands-on Practice**
@@ -626,15 +598,6 @@ predictions = model.predict(X_new)
 **Test Set**: Data for final model evaluation
 
 ---
-
-## Final Thoughts
-
-Learning machine learning is a marathon, not a sprint. Here's a realistic timeline:
-
-- **Months 1-3**: Foundations (Python, Pandas, NumPy, basic ML)
-- **Months 3-6**: Core algorithms (classification, regression, clustering)
-- **Months 6-9**: Advanced techniques (ensembles, deep learning)
-- **Months 9-12**: Specialization (NLP, computer vision, reinforcement learning)
 
 ## Remember
 
