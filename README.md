@@ -39,6 +39,25 @@ This repository is organized into four main learning modules:
    - Recommended papers and articles
    - Practice datasets
 
+## 🗂️ Review and Community Materials
+
+### English review
+
+The [`revisao/`](./revisao/) folder contains the complete module review in English:
+
+- [Predictive Models Review — HTML slides](./revisao/predictive_models_review_slides.html)
+- [Predictive Models Review — PDF slides](./revisao/predictive_models_review_slides.pdf)
+- [Predictive Models Review Exercises — HTML](./revisao/predictive_models_review_exercises.html)
+- [Predictive Models Review Exercises — PDF](./revisao/predictive_models_review_exercises.pdf)
+
+The review covers data preparation, exploratory analysis, feature engineering, supervised and unsupervised learning, Logistic Regression, Decision Trees, Random Forest, KNN, Naive Bayes, evaluation metrics, recommendation systems, and clustering.
+
+### PyQueens community class
+
+The [`aula-grace/`](./aula-grace/) folder was created **exceptionally for the college's female community**, for a dedicated review class named **PyQueens**. Its butterfly-and-disco visual identity and language were designed specifically for that audience and event. These files complement the general module resources and are not the default version of the course material.
+
+See the [folder-specific README](./aula-grace/README.md) for a description of every file.
+
 ## 🎯 Learning Path
 
 **Recommended order:**
@@ -84,4 +103,4 @@ Some concepts are supported by SVG figures stored in [`assets/`](./assets).
 
 ---
 
-*Last updated: August 2026*
+*Last updated: September 2026*
